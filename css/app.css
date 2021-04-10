@@ -1,0 +1,70 @@
+:root {
+  --yr: 0.25rem;
+  --xr: 1rem;
+
+  --yr-s: calc(var(--yr) * 2);
+  --yr-m: calc(var(--yr) * 4);
+  --yr-l: calc(var(--yr) * 8);
+
+  --fs-base: calc(var(--yr) * 4);
+  --lh-base: calc(var(--yr) * 5);
+
+  --fs-at: calc(var(--yr) * 3.5);
+  --lh-at: calc(var(--yr) * 5);
+
+  --fs-h1: calc(var(--yr) * 8);
+  --lh-h1: calc(var(--yr) * 10);
+
+  --fs-h2: calc(var(--yr) * 6);
+  --lh-h2: calc(var(--yr) * 8);
+
+  @media (--l) {
+    --yr: 0.375rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  padding: var(--yr-l) var(--xr);
+  margin: 0;
+}
+
+p {
+  margin: 0 0 calc(var(--yr) * 3);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: var(--lh-h1);
+  margin: 0 0 calc(var(--yr) * 4);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-h2);
+  margin: 0 0 calc(var(--yr) * 4);
+}
+
+
+.b-media {
+  font-size: var(--fs-at);
+  line-height: var(--lh-at);
+  padding: var(--yr-s) var(--xr);
+  background-color: pink;
+  border-radius: var(--yr);
+  margin-bottom: var(--yr-l);
+
+  @media (--s) {
+    padding: var(--yr-m) var(--xr);
+    background-color: yellow;
+  }
+
+  @media (--m) {
+    box-shadow: 0 0 0 2px red;
+  }
+}
